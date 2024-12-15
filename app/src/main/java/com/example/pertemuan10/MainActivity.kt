@@ -20,7 +20,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Pertemuan10Theme {
-                PengelolaHalaman()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                PengelolaHalaman(
+                    modifier = Modifier.padding(innerPadding)
+                )
             }
         }
     }
