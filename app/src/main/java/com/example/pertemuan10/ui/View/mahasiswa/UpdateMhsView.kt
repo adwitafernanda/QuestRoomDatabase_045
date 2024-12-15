@@ -1,8 +1,8 @@
 package com.example.pertemuan10.ui.View.mahasiswa
-
 import InsertBodyMhs
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
@@ -11,14 +11,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pertemuan10.ui.costumwidget.TopAppBar
 import com.example.pertemuan10.ui.viewmodel.PenyediaViewModel
+import com.example.pertemuan10.ui.viewmodel.UpdateMhsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.lang.reflect.Modifier
 
 @Composable
 fun UpdateMhsView(

@@ -10,6 +10,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.pertemuan10.ui.View.mahasiswa.DetailMhsView
+import com.example.pertemuan10.ui.View.mahasiswa.HomeMhsView
+import com.example.pertemuan10.ui.View.mahasiswa.UpdateMhsView
 
 @Composable
 fun PengelolaHalaman(

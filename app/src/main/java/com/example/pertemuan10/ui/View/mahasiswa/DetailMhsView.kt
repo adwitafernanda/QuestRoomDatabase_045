@@ -34,7 +34,10 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pertemuan10.data.entity.Mahasiswa
 import com.example.pertemuan10.ui.costumwidget.TopAppBar
+import com.example.pertemuan10.ui.viewmodel.DetailMhsViewModel
+import com.example.pertemuan10.ui.viewmodel.DetailUiState
 import com.example.pertemuan10.ui.viewmodel.PenyediaViewModel
+import com.example.pertemuan10.ui.viewmodel.toMahasiswaEntitty
 
 
 @Composable
@@ -80,7 +83,7 @@ fun DetailMhsView(
 @Composable
 fun BodyDetailMhs(
     modifier: Modifier = Modifier,
-    detailUiState: Detaiuistate = DetailUiState(),
+    detailUiState: DetailUiState = DetailUiState(),
     onDeleteClick: () -> Unit = {}
 ){
     var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
@@ -99,7 +102,7 @@ fun BodyDetailMhs(
             Column (modifier = modifier.fillMaxWidth().padding(16.dp))
             {
                 ItemDetailMhs(
-                    mahasiswa = detailUiState.detailUiEvent.toMahasiswaEntity(),
+                    mahasiswa = detailUiState.detailUiEvent.toMahasiswaEntitty(),
                     modifier = Modifier
                 )
                 Spacer(modifier =  Modifier.padding(8.dp))
